@@ -4,7 +4,7 @@ Wordsmiths is an open-source repository built for one purpose; understanding and
 All information presented is from the personal understanding and supporting documents.
 Feel free to make a pull request if there is anything I've misinterpreted.
 
-[View the project](#https://www.wordsmiths.io) - currently under work
+**[View the project](https://www.wordsmiths.io)** - currently under work
 
 ## Contents
 1. [Introduction](#introduction)
