@@ -8,7 +8,8 @@ Feel free to make a pull request if there is anything I've misinterpreted.
 
 ## Contents
 1. [Introduction](#introduction)
-2. [Further Reading](#further-reading)
+1. [Operations](#operations)
+2. [Transformations](#transformations)
 
 ## Introduction
 > Wordsmiths is an open-source repository built for one purpose; understanding and applying operational transformation using Python and Flask.
@@ -34,5 +35,17 @@ The initial problem which OT was developed to solve are the conflicts which occu
 
 *Figure 2. The concurrent operations problem*
 ![The Concurrent Operations Problem](doc-images/image1.png "The Concurrent Operations Problem")
+
+In this scenario, the users start with an initial string “abc”, User-01 intends to insert the character “Y” at the index “1” and User-02 intends to insert the character “Z” at the index “1”. Both of the users execute the operation locally, resulting in the strings “abYc” and “abZc” respectively. After local execution, they both send their operations to each other and execute it straight away - subsequently resulting in two different strings “abZYc” and “abYZc”. This problem illustrates how naively sending operations between clients will result in inconsistent states between users, thus, preventing the ability to collaboratively edit on a document. The solution to this problem is to first transform both operations together when it is sent to the other user so that we can achieve the intentions of both users.
+
+## Transformations
+The transform is the core element of Operational Transformation, it does the heavy lifting for the system. Transforms essentially define the rules for converging multiple operations together.
+
+Google defines this transformation process with the mathematical identity;
+
+![Transform Identity](doc-images/image2.png "Transform Identity")
+![Transform Identity](doc-images/image3.png "Transform Identity")
+
+This essentially states that when the transform is given two operations, a and b respectively, it will derive two new operations known as a’ and b’. Effectively, these two derivatives can then be applied to both users to achieve a synchronised, equal state. This mathematical identity is illustrated in a state diagram in Figure 3, showing how the derivatives from transform can be used to achieve the same state.
 
 ## Further Reading
