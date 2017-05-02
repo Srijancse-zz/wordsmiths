@@ -3,4 +3,13 @@ Wordsmiths is an open-source repository built for one purpose; understanding and
 
 Feel free to make a pull request if there is anything I've misinterpreted.
 
-## Important Links 
+## Contents
+1. [Important Links](#important-links)
+2. [Introduction](#introduction)
+
+
+
+## Important Links
+
+
+## Introduction
