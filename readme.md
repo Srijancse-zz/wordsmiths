@@ -33,7 +33,7 @@ OT is a concatenation of two key processes; Operations and Transformations. Oper
 The initial problem which OT was developed to solve are the conflicts which occur as a result of multiple users concurrently executing operations on a document. If multiple users attempt to execute an operation at a specific index of a document, there will be inconsistencies when their operations are sent to the other user - leaving the document in an unsynchronised state. This problem is illustrated in Figure 2, where two users attempt to execute an insert operation on a document.
 
 *Figure 2. The concurrent operations problem*
-!http://i.imgur.com/vgoSYB0.png
+![Image 1 - Operations Problem]http://i.imgur.com/vgoSYB0.png
 
 
 ## Further Reading
