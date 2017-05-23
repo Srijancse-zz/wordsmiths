@@ -50,9 +50,9 @@ In this scenario, the users start with an initial string “abc”, User-01 inte
 
 In this specific python implementation, operations are stored as dictionaries in a list, eg;
 
-'''python
+```python
 op1 = [{'retain': 1}, {'insert', 'a'}]
-'''
+```
 
 -----
 
@@ -83,7 +83,7 @@ The algorithm proposed for this Pythonic Implementation is as follows, taking on
 ### Character-Wise Inclusion Transformation
 This is the proposed assign system, which looks at the two operations given and *assigns* the operations to a sub-function which performs the actual transformation. It is worth noting that these functions are purposely overly-verbose for readability. 
 
-'''python
+```python
 def transform(op1, op2):
     transform_type = []
     if "insert" in op1:
@@ -103,7 +103,7 @@ def transform(op1, op2):
     if transform_type[0] == "Del" and transform_type[1] == "Ins":
             delete_insert(op1, op2)
     return transformed_ops[0], transformed_ops[1]
-'''
+```
 -----
 ## Control Functions
 -----
